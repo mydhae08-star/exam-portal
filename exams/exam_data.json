@@ -1,0 +1,255 @@
+{
+  "departments": [
+    {
+      "name": "Handset Operations",
+      "processes": [
+        {
+          "name": "Device Intake & Triage",
+          "exams": [
+            {
+              "id": "HS-TRIAGE-001",
+              "title": "Handset Triage Basics",
+              "duration_minutes": 12,
+              "pass_score": 70,
+              "randomize_questions": true,
+              "questions": [
+                {
+                  "id": "Q1",
+                  "type": "mcq",
+                  "prompt": "Which is the BEST first step when receiving a device for repair?",
+                  "choices": [
+                    { "id": "A", "text": "Start disassembly immediately" },
+                    { "id": "B", "text": "Verify device identity and customer details" },
+                    { "id": "C", "text": "Replace the battery" },
+                    { "id": "D", "text": "Run a display test first" }
+                  ],
+                  "answer": "B",
+                  "points": 10
+                },
+                {
+                  "id": "Q2",
+                  "type": "mcq",
+                  "prompt": "What should you do if the device shows signs of liquid exposure?",
+                  "choices": [
+                    { "id": "A", "text": "Proceed with repair normally" },
+                    { "id": "B", "text": "Document indicators and follow liquid-damage SOP" },
+                    { "id": "C", "text": "Charge the phone to confirm power" },
+                    { "id": "D", "text": "Factory reset immediately" }
+                  ],
+                  "answer": "B",
+                  "points": 10
+                },
+                {
+                  "id": "Q3",
+                  "type": "true_false",
+                  "prompt": "It is acceptable to skip cosmetic condition documentation if the device powers on.",
+                  "answer": false,
+                  "points": 10
+                },
+
+                {
+                  "id": "Q4",
+                  "type": "mcq",
+                  "prompt": "Before beginning any repair work, what should be confirmed regarding customer data?",
+                  "choices": [
+                    { "id": "A", "text": "Customer’s wallpaper preference" },
+                    { "id": "B", "text": "Authorization/consent and correct device ownership details" },
+                    { "id": "C", "text": "Bluetooth name is set" },
+                    { "id": "D", "text": "Ringtone volume is max" }
+                  ],
+                  "answer": "B",
+                  "points": 10
+                },
+                {
+                  "id": "Q5",
+                  "type": "mcq",
+                  "prompt": "Which is the BEST reason to document device condition (scratches/dents) at intake?",
+                  "choices": [
+                    { "id": "A", "text": "It is optional; documentation is only for powered-off devices" },
+                    { "id": "B", "text": "To reduce repair time by skipping checks" },
+                    { "id": "C", "text": "To avoid disputes and ensure proper accountability" },
+                    { "id": "D", "text": "To improve Wi-Fi performance" }
+                  ],
+                  "answer": "C",
+                  "points": 10
+                },
+                {
+                  "id": "Q6",
+                  "type": "mcq",
+                  "prompt": "If a device is severely damaged (e.g., swollen battery, exposed internals), what is the BEST action?",
+                  "choices": [
+                    { "id": "A", "text": "Proceed quickly to finish before it gets worse" },
+                    { "id": "B", "text": "Isolate the device, follow safety SOP, and escalate as required" },
+                    { "id": "C", "text": "Try to charge it to see if it powers on" },
+                    { "id": "D", "text": "Submerge it in alcohol to clean it" }
+                  ],
+                  "answer": "B",
+                  "points": 10
+                },
+                {
+                  "id": "Q7",
+                  "type": "true_false",
+                  "prompt": "Intake triage should include verifying basic functionality when safe (e.g., power, touch, buttons) before repair.",
+                  "answer": true,
+                  "points": 10
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "name": "Enclosure Operations",
+      "processes": [
+        {
+          "name": "Backglass Removal & Prep",
+          "exams": [
+            {
+              "id": "EN-BG-001",
+              "title": "Backglass Removal Safety & Prep",
+              "duration_minutes": 10,
+              "pass_score": 75,
+              "randomize_questions": true,
+              "questions": [
+                {
+                  "id": "Q1",
+                  "type": "mcq",
+                  "prompt": "What is the PRIMARY safety reason for using eye protection during backglass work?",
+                  "choices": [
+                    { "id": "A", "text": "To see better under bright lights" },
+                    { "id": "B", "text": "To prevent glass shards from entering eyes" },
+                    { "id": "C", "text": "To reduce screen glare" },
+                    { "id": "D", "text": "To improve adhesive curing" }
+                  ],
+                  "answer": "B",
+                  "points": 10
+                },
+                {
+                  "id": "Q2",
+                  "type": "mcq",
+                  "prompt": "Before applying heat for backglass removal, you should FIRST:",
+                  "choices": [
+                    { "id": "A", "text": "Install the new backglass" },
+                    { "id": "B", "text": "Remove SIM tray / note device condition / protect sensitive areas" },
+                    { "id": "C", "text": "Run a factory reset" },
+                    { "id": "D", "text": "Charge the battery to 100%" }
+                  ],
+                  "answer": "B",
+                  "points": 10
+                },
+                {
+                  "id": "Q3",
+                  "type": "mcq",
+                  "prompt": "What is the BEST practice when removing broken glass fragments?",
+                  "choices": [
+                    { "id": "A", "text": "Use bare hands for better grip" },
+                    { "id": "B", "text": "Use approved tools/PPE and control debris to avoid contamination" },
+                    { "id": "C", "text": "Blow shards off with your mouth" },
+                    { "id": "D", "text": "Shake the device over a trash bin" }
+                  ],
+                  "answer": "B",
+                  "points": 10
+                },
+                {
+                  "id": "Q4",
+                  "type": "true_false",
+                  "prompt": "Excessive heat can increase the risk of internal component damage during backglass removal.",
+                  "answer": true,
+                  "points": 10
+                },
+                {
+                  "id": "Q5",
+                  "type": "mcq",
+                  "prompt": "After backglass removal, what should be done before installing a replacement backglass?",
+                  "choices": [
+                    { "id": "A", "text": "Leave old adhesive if it still feels sticky" },
+                    { "id": "B", "text": "Clean the surface, remove old adhesive residue, and inspect the frame for damage" },
+                    { "id": "C", "text": "Apply adhesive directly over dust" },
+                    { "id": "D", "text": "Skip inspection to reduce cycle time" }
+                  ],
+                  "answer": "B",
+                  "points": 10
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "name": "Display Operations",
+      "processes": [
+        {
+          "name": "Display Functional Testing",
+          "exams": [
+            {
+              "id": "DP-TEST-001",
+              "title": "Display Test & Validation",
+              "duration_minutes": 10,
+              "pass_score": 75,
+              "randomize_questions": false,
+              "questions": [
+                {
+                  "id": "Q1",
+                  "type": "mcq",
+                  "prompt": "Which is the MOST critical display check after replacement?",
+                  "choices": [
+                    { "id": "A", "text": "Wallpaper color accuracy" },
+                    { "id": "B", "text": "Touch responsiveness across the entire grid" },
+                    { "id": "C", "text": "Ringtone volume" },
+                    { "id": "D", "text": "Bluetooth name" }
+                  ],
+                  "answer": "B",
+                  "points": 10
+                },
+                {
+                  "id": "Q2",
+                  "type": "true_false",
+                  "prompt": "Dead pixels and touch issues should be documented and handled via rework/escalation SOP.",
+                  "answer": true,
+                  "points": 10
+                },
+                {
+                  "id": "Q3",
+                  "type": "mcq",
+                  "prompt": "After installing a new display, which step should be done BEFORE final sealing?",
+                  "choices": [
+                    { "id": "A", "text": "Run a full functional test (touch, brightness, sensors if applicable)" },
+                    { "id": "B", "text": "Apply permanent adhesive immediately" },
+                    { "id": "C", "text": "Ship the device to speed turnaround" },
+                    { "id": "D", "text": "Lower brightness to 0%" }
+                  ],
+                  "answer": "A",
+                  "points": 10
+                },
+                {
+                  "id": "Q4",
+                  "type": "mcq",
+                  "prompt": "What is the BEST practice for checking touch performance?",
+                  "choices": [
+                    { "id": "A", "text": "Test only the center area" },
+                    { "id": "B", "text": "Test the full grid including edges and corners" },
+                    { "id": "C", "text": "Skip touch test if display turns on" },
+                    { "id": "D", "text": "Only test with gloves off" }
+                  ],
+                  "answer": "B",
+                  "points": 10
+                },
+                {
+                  "id": "Q5",
+                  "type": "true_false",
+                  "prompt": "If the display passes tests but shows visual gaps, the device should be reworked before closing.",
+                  "answer": true,
+                  "points": 10
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

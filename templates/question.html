@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}Exam প্রশ্ন{% endblock %}
+
+{% block content %}
+<h2>{{ exam.title }}</h2>
+<p class="sub">Question {{ q_index|add:1 }} of {{ total }}</p>
+
+<form method="post">
+  {% csrf_token %}
+
+  <div class="qbox">
+    <p><strong>{{ q.id }}.</strong> {{ q.prompt }}</p>
+
+    {% if q.type == "mcq" %}
+      {% for c in q.choices %}
+        <label class="choice">
+          <input type="radio" name="answer" value="{{ c.id }}"
+            {% if current_answer == c.id %}checked{% endif %}
+            required
+          >
+          <strong>{{ c.id }}.</strong> {{ c.text }}
+        </label>
+      {% endfor %}
+
+    {% elif q.type == "true_false" %}
+      <label class="choice">
+        <input type="radio" name="answer" value="True"
+          {% if current_answer == True %}checked{% endif %}
+          required
+        >
+        True
+      </label>
+      <label class="choice">
+        <input type="radio" name="answer" value="False"
+          {% if current_answer == False %}checked{% endif %}
+          required
+        >
+        False
+      </label>
+
+    {% else %}
+      <input name="answer" required value="{{ current_answer|default:'' }}" />
+    {% endif %}
+  </div>
+
+  <div class="btnrow">
+    {% if not is_first %}
+      <button class="secondary" type="submit" name="action" value="back">Back</button>
+    {% endif %}
+
+    {% if is_last %}
+      <button class="primary" type="submit" name="action" value="submit">Submit</button>
+    {% else %}
+      <button class="primary" type="submit" name="action" value="next">Next</button>
+    {% endif %}
+
+    <a class="btn danger" href="/choose/">Quit</a>
+  </div>
+</form>
+{% endblock %}

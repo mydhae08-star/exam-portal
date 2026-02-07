@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Choose Exam{% endblock %}
+
+{% block content %}
+<h2>Choose Exam</h2>
+<p class="sub">Select your department and process to see available exams.</p>
+
+<form method="post">
+  {% csrf_token %}
+
+  <div class="row">
+    <label>Department</label>
+    <select name="department" onchange="this.form.submit()">
+      <option value="">-- Select Department --</option>
+      {% for d in departments %}
+        <option value="{{ d }}" {% if d == selected_dept %}selected{% endif %}>{{ d }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <div class="row">
+    <label>Process</label>
+    <select name="process" onchange="this.form.submit()" {% if not selected_dept %}disabled{% endif %}>
+      <option value="">-- Select Process --</option>
+      {% for p in processes %}
+        <option value="{{ p }}" {% if p == selected_proc %}selected{% endif %}>{{ p }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <div class="row">
+    <label>Exam</label>
+    <select name="exam_id" {% if not exams %}disabled{% endif %}>
+      <option value="">-- Select Exam --</option>
+      {% for e in exams %}
+        <option value="{{ e.id }}">{{ e.id }} — {{ e.name }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <div class="btnrow">
+    <button class="primary" type="submit" {% if not exams %}disabled{% endif %}>Start</button>
+  </div>
+
+  <div class="hint">Tip: If Exam is disabled, choose Department and Process first.</div>
+</form>
+{% endblock %}

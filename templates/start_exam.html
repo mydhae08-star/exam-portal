@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Start Exam{% endblock %}
+
+{% block content %}
+<h2>{{ exam.title }}</h2>
+<p class="sub">
+  <span class="pill">Duration: {{ exam.duration_minutes }} min</span>
+  <span class="pill">Pass: {{ exam.pass_score }}%</span>
+</p>
+
+<div class="qbox">
+  You’re about to start the exam. Make sure you have enough time to finish.
+</div>
+
+<div class="btnrow">
+  <a class="btn primary" href="/q/0/">Begin Exam</a>
+  <a class="btn secondary" href="/choose/">Back</a>
+</div>
+{% endblock %}

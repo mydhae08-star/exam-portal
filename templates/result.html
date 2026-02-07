@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Result{% endblock %}
+
+{% block content %}
+<h2>Result: {{ exam.title }}</h2>
+
+<p class="sub">
+  <span class="pill">Score: {{ result.score_pct }}%</span>
+  {% if result.passed %}
+    <span class="pill">Status: <span class="status-ok">PASSED</span></span>
+  {% else %}
+    <span class="pill">Status: <span class="status-bad">FAILED</span></span>
+  {% endif %}
+</p>
+
+<div class="btnrow">
+  <a class="btn primary" href="/choose/">Take Another Exam</a>
+  <a class="btn secondary" href="/result/download/">Download Result (CSV)</a>
+</div>
+
+<h3 style="margin-top:18px;">Breakdown</h3>
+<ul>
+  {% for row in result.breakdown %}
+    <li>
+      <strong>{{ row.question_id }}</strong>:
+      {% if row.is_correct %}
+        <span class="status-ok">Correct</span>
+      {% else %}
+        <span class="status-bad">Incorrect</span>
+      {% endif %}
+      (you: {{ row.given }} | correct: {{ row.correct }})
+    </li>
+  {% endfor %}
+</ul>
+{% endblock %}

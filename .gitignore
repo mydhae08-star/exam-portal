@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.log
+
+# Django
+*.pot
+*.mo
+local_settings.py
+
+# Environment / secrets
+.env
+.env.*
+*.pem
+*.key
+
+# Virtualenv
+venv/
+.venv/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
